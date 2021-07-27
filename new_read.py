@@ -24,13 +24,13 @@ def read_prep_split(path,filename,N):
                     text = text.lower()
                     
                     if float(row[1]) <= 0.3:
-                        label = 1
+                        label = 0
                     
                     if 0.3 < float(row[1]) < 0.7:
                         continue
                     
                     if 0.7 <= float(row[1]):
-                        label = 0
+                        label = 1
                         
                     new_row=[row[0],text,label]
                     dataset.append(new_row)
